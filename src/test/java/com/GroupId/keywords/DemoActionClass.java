@@ -2,6 +2,8 @@ package com.GroupId.keywords;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.asserts.Assertion;
 
 public class DemoActionClass {
 	
@@ -15,5 +17,9 @@ public class DemoActionClass {
 
 	public void enterSearchTerm(String searchTerm) {
 		driver.findElement(searchBox).sendKeys(searchTerm);
+	}
+	
+	public void verifyUrl(String expectedUrl) {
+		Assert.assertTrue(driver.getCurrentUrl().contains(expectedUrl),"The URL is not the specified one");
 	}
 }

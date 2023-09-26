@@ -7,6 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -17,15 +18,27 @@ public class BaseTest {
 
 	
 	public TestSessionInitiator test;
+	
+	@BeforeTest
+	public void beforeTest() {
+		System.out.println("****This is before Test being executed****");
+	}
+	
+	@AfterTest
+	public void afterTest() {
+		System.out.println("####This is after Test being executed####");
+	}
 
 	@BeforeClass
 	public void startTest() {
+		System.out.println("!!!!This is before class being executed!!!!");
 		test = new TestSessionInitiator();
 	}
 	
 	@AfterClass
 	public void CloseSession() {
-//		test.closeSession();
+		System.out.println("@@@@This is after class being executed@@@@");
+		test.quitSession();
 	}
 	
 }

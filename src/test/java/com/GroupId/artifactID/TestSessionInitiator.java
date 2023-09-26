@@ -27,10 +27,12 @@ public class TestSessionInitiator {
 	}
 	
 	public void quitSession() {
+//		this will close test session
 		driver.quit();
 	}
 	
 	public void closeSession() {
+//		this will close the windows
 		driver.close();
 	}
 	

@@ -4,6 +4,7 @@
   <test name="Test Basics 1">
       <classes>
       <class name="com.GroupId.test.DemoTest"/>
+      <class name="com.GroupId.test.DemoTest2"/>
       </classes>
   </test> <!-- Test --> 
    
