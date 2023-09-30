@@ -2,12 +2,14 @@ package com.GroupId.artifactID;
 
 import org.openqa.selenium.WebDriver;
 import com.GroupId.keywords.DemoActionClass;
+import com.GroupId.keywords.DemoDataProvider;
 import com.GroupId.artifactID.WebDriverInitiator;
 
 @SuppressWarnings("unused")
 public class TestSessionInitiator {
 	
 	public DemoActionClass demoActionClass ;
+	public DemoDataProvider demoDataProvider;
 	
 	public WebDriver driver;
 	
@@ -19,6 +21,7 @@ public class TestSessionInitiator {
 	
 	public void initiate() {
 		demoActionClass = new DemoActionClass(driver);
+		demoDataProvider = new DemoDataProvider(driver);
 	}
 		
 	public void launchApplication(String url) {
