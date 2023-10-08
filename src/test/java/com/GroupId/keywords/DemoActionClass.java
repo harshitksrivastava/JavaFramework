@@ -3,7 +3,6 @@ package com.GroupId.keywords;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.asserts.Assertion;
 
 public class DemoActionClass {
 	

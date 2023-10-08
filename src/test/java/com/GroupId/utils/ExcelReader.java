@@ -1,10 +1,18 @@
 package com.GroupId.utils;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import com.GroupId.POJO.BookDetails;
+import com.poiji.bind.Poiji;
+import com.poiji.option.PoijiOptions;
+import com.poiji.option.PoijiOptions.PoijiOptionsBuilder;
+
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -48,7 +56,7 @@ public class ExcelReader {
 
 		fi = new FileInputStream(xlFile);
 		wb = new XSSFWorkbook(fi);
-		sheet = wb.createSheet(xlSheet);
+		sheet = wb.getSheet(xlSheet);
 
 //		getting the row to count the columns of that row
 		row = sheet.getRow(rowNum);
@@ -100,5 +108,11 @@ public class ExcelReader {
 		fo.close();
 		wb.close();
 		fi.close();		
+	}
+	
+	public static List<BookDetails> readExcelData(String xlFile){
+		PoijiOptions options = PoijiOptionsBuilder.settings().build();
+		List<BookDetails> bookInfo = Poiji.fromExcel(new File(xlFile), BookDetails.class, options);
+		return bookInfo;
 	}
 }
