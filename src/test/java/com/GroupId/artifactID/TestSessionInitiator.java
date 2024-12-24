@@ -23,7 +23,6 @@ public class TestSessionInitiator {
 	public void initiate() {
 		demoActionClass = new DemoActionClass(driver);
 		demoDataProviderActionClass = new DemoDataProviderActionClass(driver);
-
 	}
 		
 	public void launchApplication(String url) {

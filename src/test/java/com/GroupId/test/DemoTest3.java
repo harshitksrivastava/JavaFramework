@@ -1,6 +1,7 @@
 package com.GroupId.test;
 
 import java.io.IOException;
+import com.GroupId.utils.ConfigFileReader;
 import java.util.List;
 
 import org.testng.annotations.DataProvider;
@@ -13,7 +14,7 @@ import com.GroupId.utils.ExcelReader;
 
 public class DemoTest3 extends BaseTest {
 
-	String path = "/home/admin1/eclipse-workspace/artifactID/src/test/resource/TestData/ExcelFiles/bookList.xlsx";
+	String path = ConfigFileReader.getProperty("excelFilePath");
 
 	@DataProvider(name = "data")
 	public Object[][] demoData() {

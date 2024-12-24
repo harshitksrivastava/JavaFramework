@@ -3,6 +3,7 @@ package com.GroupId.artifactID;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WebDriverInitiator {
 	
@@ -20,7 +21,7 @@ public class WebDriverInitiator {
 		return new ChromeDriver(options);
 //		
 //		System.setProperty("webdriver.gecko.driver", "/home/admin1/eclipse-workspace/artifactID/src/test/resource/webDrivers/geckodriver");
-//		this.driver = new FirefoxDriver();
+//		return new FirefoxDriver();
 		
 	}
 }
