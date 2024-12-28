@@ -15,6 +15,7 @@ import com.GroupId.utils.ExcelReader;
 public class DemoTest3 extends BaseTest {
 
 	String path = ConfigFileReader.getProperty("excelFilePath");
+	String sheetName = ConfigFileReader.getProperty("excelSheetName");
 
 	@DataProvider(name = "data")
 	public Object[][] demoData() {
@@ -24,13 +25,13 @@ public class DemoTest3 extends BaseTest {
 	@DataProvider(name = "dataFromExcel")
 	String[][] demoDataFromExcel() throws IOException {
 //		String path = "/home/admin1/eclipse-workspace/artifactID/src/test/resource/TestData/ExcelFiles/bookList.xlsx";
-		int rowNum = ExcelReader.getRowCount(path, "ProgrammingBooks");
-		int colNum = ExcelReader.getCellCount(path, "ProgrammingBooks", 1);
+		int rowNum = ExcelReader.getRowCount(path, sheetName);
+		int colNum = ExcelReader.getCellCount(path, sheetName, 1);
 
 		String books[][] = new String[rowNum][colNum];
 		for (int i = 1; i <= rowNum; i++) {
 			for (int j = 0; j < colNum; j++) {
-				books[i - 1][j] = ExcelReader.getCellData(path, "ProgrammingBooks", i, j);
+				books[i - 1][j] = ExcelReader.getCellData(path, sheetName, i, j);
 			}
 		}
 		return books;
