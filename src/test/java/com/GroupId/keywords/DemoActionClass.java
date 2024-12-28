@@ -7,12 +7,12 @@ import org.testng.Assert;
 public class DemoActionClass {
 	
 	WebDriver driver;
+	By searchBox = By.id("APjFqb");
 	
 	public DemoActionClass(WebDriver driver) {
 		this.driver = driver;
 	}
-	
-	By searchBox = By.id("APjFqb");
+		
 
 	public void enterSearchTerm(String searchTerm) {
 		driver.findElement(searchBox).sendKeys(searchTerm);
