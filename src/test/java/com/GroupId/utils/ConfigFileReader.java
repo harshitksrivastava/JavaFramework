@@ -34,7 +34,7 @@ public class ConfigFileReader {
 	}
 	
 	public static String getProperty(String property) {
-		if(isLoaded)
+		if(!isLoaded)
 		return getProperty(defaultConfigFile,property);
 		else {
 			return properties.getProperty(property);
