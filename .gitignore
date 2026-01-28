@@ -8,6 +8,10 @@
 # Log file
 *.log
 
+.allure/
+allure-results/
+
+
 # BlueJ files
 *.ctxt
 
@@ -46,6 +50,7 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
 
 # End of https://www.toptal.com/developers/gitignore/api/maven,java
 
