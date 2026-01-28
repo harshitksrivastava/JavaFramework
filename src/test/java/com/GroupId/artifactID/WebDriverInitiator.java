@@ -9,7 +9,9 @@ public class WebDriverInitiator {
 	
 	
 	public WebDriver webDriverSetup() {		
+
 //		System.setProperty("webdriver.chrome.driver", "/home/admin1/eclipse-workspace/artifactID/src/test/resource/webDrivers/chromedriver");
+
 		ChromeOptions options = new ChromeOptions();
 //		options.addArguments("start-maximized"); // open Browser in maximized mode
 //		options.addArguments("disable-infobars"); // disabling infobars
