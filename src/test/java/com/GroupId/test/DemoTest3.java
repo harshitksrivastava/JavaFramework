@@ -27,6 +27,7 @@ public class DemoTest3 extends BaseTest {
 //		String path = "/home/admin1/eclipse-workspace/artifactID/src/test/resource/TestData/ExcelFiles/bookList.xlsx";
 		int rowNum = ExcelReader.getRowCount(path, sheetName);
 		int colNum = ExcelReader.getCellCount(path, sheetName, 1);
+			
 
 		String books[][] = new String[rowNum][colNum];
 		for (int i = 1; i <= rowNum; i++) {

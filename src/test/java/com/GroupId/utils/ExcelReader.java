@@ -2,6 +2,7 @@ package com.GroupId.utils;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
@@ -14,6 +15,7 @@ import com.poiji.option.PoijiOptions;
 import com.poiji.option.PoijiOptions.PoijiOptionsBuilder;
 
 import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -31,6 +33,33 @@ public class ExcelReader {
 
 //	xlFile => path to the excel File
 //	xlSheet => name of the sheet in the excel File
+	
+	public static String getSheetName(String xlFile, int xlSheetNumber ) throws IOException {
+		// TODO Auto-generated method stub
+		fi = new FileInputStream(xlFile);
+		wb = new XSSFWorkbook(fi);
+		String sheetName = wb.getSheetName(xlSheetNumber);
+
+
+//		close all the open resource
+		wb.close();
+		fi.close();
+		return sheetName;
+	}
+	
+	public static Row getRow(String xlFile, String xlSheet, int i) throws IOException {
+		
+		fi = new FileInputStream(xlFile);
+		wb = new XSSFWorkbook(fi);
+		sheet = wb.getSheet(xlSheet);
+
+//		getting the row to count the columns of that row
+		row = sheet.getRow(i);
+
+		wb.close();
+		fi.close();
+		return row;
+	}
 
 //	method to get row count
 	public static int getRowCount(String xlFile, String xlSheet) throws IOException {
@@ -109,6 +138,7 @@ public class ExcelReader {
 		wb.close();
 		fi.close();		
 	}
+	
 	
 	public static List<BookDetails> readExcelData(String xlFile){
 		PoijiOptions options = PoijiOptionsBuilder.settings().build();
