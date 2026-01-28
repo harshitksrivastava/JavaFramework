@@ -20,14 +20,12 @@ public class DemoDataProviderActionClass {
 		// TODO Auto-generated method stub
 		System.out.println("BookName : " + title);
 		System.out.println("ISBN : " + ISBN);
-
 	}
 	
 	public void printDetails(BookDetails bookD) {
 		// TODO Auto-generated method stub
 		System.out.println(bookD.toString());
 //		System.out.println("ISBN : " + ISBN);
-
 	}
 
 }

@@ -13,4 +13,8 @@ org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
 org.eclipse.jdt.core.compiler.problem.forbiddenReference=warning
 org.eclipse.jdt.core.compiler.problem.reportPreviewFeatures=warning
 org.eclipse.jdt.core.compiler.release=disabled
+<<<<<<< HEAD
 org.eclipse.jdt.core.compiler.source=15
+=======
+org.eclipse.jdt.core.compiler.source=15
+>>>>>>> 6d549bd1f85dd28c374aeb47feac36c74a2e1743

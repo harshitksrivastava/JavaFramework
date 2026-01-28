@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Practice Suite">
-  
+   <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg" />
+    </listeners>
   <test name="Test Basics 1">
       <classes>
       <class name="com.GroupId.test.DemoTest"/>
@@ -14,13 +16,13 @@
        <class name="com.GroupId.test.DemoTest2"/>
     </classes>
   </test>
-  
-  <test name="Test Basics 3">    
-    <!-- <parameter name="emailid" value="tester789@gmail.com"/> -->
+  <!-- <test name="Test Basics 3">    
+    <parameter name="emailid" value="tester789@gmail.com"/> 
     <classes>
        <class name="com.GroupId.test.DemoTest3"/>
     </classes>
-  </test>  
+  </test>  -->
+   
 </suite> <!-- Suite -->
 <!--  
 

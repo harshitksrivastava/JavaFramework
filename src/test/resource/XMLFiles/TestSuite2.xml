@@ -16,6 +16,12 @@
     </classes>
      
   </test>  
+  
+  <test name="Test Basics 1">
+      <classes>
+      <class name="com.GroupId.test.DemoTest"/>
+      </classes>
+  </test> 
 </suite> <!-- Suite -->
 <!--  
 
